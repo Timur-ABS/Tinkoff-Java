@@ -1,19 +1,25 @@
 package edu.hw1;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 import org.jetbrains.annotations.NotNull;
 
 public final class Task1 {
     private static final int SECONDS_IN_A_MINUTE = 60;
+    private static final Logger LOGGER = Logger.getLogger(Task1.class.getName());
 
     private Task1() {
     }
 
+    /**
+     * The main method to start the program.
+     * It reads a string from the console and converts it from minutes to seconds.
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String string = in.nextLine();
         int result = convertMinutesToSeconds(string);
-        System.out.println(result);
+        LOGGER.info(String.valueOf(result));
     }
 
     public static int convertMinutesToSeconds(@NotNull String input) {
