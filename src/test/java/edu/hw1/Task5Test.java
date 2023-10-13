@@ -1,24 +1,23 @@
 package edu.hw1;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task5Test {
-
-    @Test
-    public void testIsPalindromeDescendant() {
-        assertTrue(Task5.isPalindromeDescendant(11211230));
-        assertTrue(Task5.isPalindromeDescendant(13001120));
-        assertTrue(Task5.isPalindromeDescendant(23336014));
-        assertTrue(Task5.isPalindromeDescendant(11));
-        assertTrue(Task5.isPalindromeDescendant(2));
-        assertFalse(Task5.isPalindromeDescendant(13));
-        assertTrue(Task5.isPalindromeDescendant(111111));
-        assertFalse(Task5.isPalindromeDescendant(15));
-        assertFalse(Task5.isPalindromeDescendant(11133118));
-        //If there is an odd number of digits, there is a conditional 0 on the left
-        assertTrue(Task5.isPalindromeDescendant(413));
-
+    @ParameterizedTest
+    @CsvSource({
+        "11211230, true",
+        "13001120, true",
+        "23336014, true",
+        "11, true",
+        "2, true",
+        "13, false",
+        "111111, true",
+        "15, false",
+        "11133118, false"
+    })
+    public void testIsPalindromeDescendant(int number, boolean expectedResult) {
+        assertEquals(expectedResult, Task5.isPalindromeDescendant(number));
     }
 }
-
