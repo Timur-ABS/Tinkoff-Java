@@ -7,10 +7,6 @@ public final class Task6 {
     private static final int ARRAY_SIZE = 4;
     private static final int BASE_10 = 10;
 
-    private Task6() {
-
-    }
-
     public static int countK(int number) {
         if (number == KAPREKAR_CONSTANT) {
             return 0;
