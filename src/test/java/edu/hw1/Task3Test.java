@@ -1,6 +1,8 @@
 package edu.hw1;
 
 import java.util.stream.Stream;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,7 +14,7 @@ public class Task3Test {
         assertEquals(expected, Task3.isNestable(arr1, arr2));
     }
 
-    private static Stream<Object[]> nestableDataProvider() {
+    @Contract(pure = true) private static @NotNull Stream<Object[]> nestableDataProvider() {
         return Stream.of(
             new Object[] {new int[] {1, 2, 3, 4}, new int[] {0, 6}, true},
             new Object[] {new int[] {3, 1}, new int[] {4, 0}, true},

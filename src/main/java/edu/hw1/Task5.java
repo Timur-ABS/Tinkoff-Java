@@ -1,7 +1,9 @@
 package edu.hw1;
 
+import org.jetbrains.annotations.NotNull;
+
 public final class Task5 {
-    public static Boolean isPalindromeDescendant(int number) {
+    public static @NotNull Boolean isPalindromeDescendant(int number) {
         if (number <= 9) {
             return true;
         }
