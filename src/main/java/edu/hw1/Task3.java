@@ -3,6 +3,10 @@ package edu.hw1;
 import org.jetbrains.annotations.NotNull;
 
 public final class Task3 {
+    private Task3() {
+
+    }
+
     public static boolean isNestable(int @NotNull [] arr1, int[] arr2) {
         if (arr1.length == 0) {
             return true;

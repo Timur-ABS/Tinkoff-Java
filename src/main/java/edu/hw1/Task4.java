@@ -1,9 +1,12 @@
 package edu.hw1;
 
 public final class Task4 {
+    private Task4() {
+
+    }
     public static String fixString(String s) {
         if (s == null) {
-            return s;
+            return null;
         }
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < s.length(); i += 2) {

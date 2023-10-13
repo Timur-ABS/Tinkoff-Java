@@ -3,11 +3,16 @@ package edu.hw1;
 import org.jetbrains.annotations.NotNull;
 
 public final class Task5 {
+    private static final int BASE_9 = 9;
+    private static final int BASE_10 = 10;
+
+    private static final int BASE_100 = 100;
+
     public static @NotNull Boolean isPalindromeDescendant(int number) {
-        if (number <= 9) {
+        if (number <= BASE_9) {
             return true;
         }
-        while (number > 9) {
+        while (number > BASE_9) {
             if (isPalindrome(number)) {
                 return true;
             }
@@ -18,17 +23,17 @@ public final class Task5 {
 
     private static int getDescendant(int number) {
         int descendant = 0;
-        while (number > 9) {
-            int lastDigit = number % 10;
-            number /= 10;
-            int secondLastDigit = number % 10;
-            number /= 10;
+        while (number > BASE_9) {
+            int lastDigit = number % BASE_10;
+            number /= BASE_10;
+            int secondLastDigit = number % BASE_10;
+            number /= BASE_10;
 
             int sum = lastDigit + secondLastDigit;
-            if (sum <= 9) {
-                descendant = (descendant * 10) + sum;
+            if (sum <= BASE_9) {
+                descendant = (descendant * BASE_10) + sum;
             } else {
-                descendant = (descendant * 100) + sum;
+                descendant = (descendant * BASE_100) + sum;
             }
         }
         return descendant;

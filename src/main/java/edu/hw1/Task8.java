@@ -1,6 +1,10 @@
 package edu.hw1;
 
 public final class Task8 {
+    private Task8() {
+
+    }
+
     private static final int BOARD_SIZE = 8;
     private static final int[][] MOVES = {
         {1, 2}, {1, -2}, {-1, 2}, {-1, -2},

@@ -4,6 +4,11 @@ import java.util.Scanner;
 import org.jetbrains.annotations.NotNull;
 
 public final class Task1 {
+    private static final int SECONDS_IN_A_MINUTE = 60;
+
+    private Task1() {
+    }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String string = in.nextLine();
@@ -19,10 +24,10 @@ public final class Task1 {
         int minutes = convertStringToInt(parts[0]);
         int seconds = convertStringToInt(parts[1]);
 
-        if (minutes == -1 || seconds == -1 || seconds >= 60) {
+        if (minutes == -1 || seconds == -1 || seconds >= SECONDS_IN_A_MINUTE) {
             return -1;
         }
-        return minutes * 60 + seconds;
+        return minutes * SECONDS_IN_A_MINUTE + seconds;
     }
 
     private static int convertStringToInt(@NotNull String string) {
