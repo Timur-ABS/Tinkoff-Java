@@ -5,10 +5,13 @@ import org.jetbrains.annotations.NotNull;
 public final class Task5 {
     private static final int BASE_9 = 9;
     private static final int BASE_10 = 10;
-
     private static final int BASE_100 = 100;
 
-    public static @NotNull Boolean isPalindromeDescendant(int number) {
+    private Task5() {
+    }
+
+    public static @NotNull Boolean isPalindromeDescendant(int num) {
+        int number = num;
         if (number <= BASE_9) {
             return true;
         }
@@ -21,7 +24,8 @@ public final class Task5 {
         return false;
     }
 
-    private static int getDescendant(int number) {
+    private static int getDescendant(int num) {
+        int number = num;
         int descendant = 0;
         while (number > BASE_9) {
             int lastDigit = number % BASE_10;

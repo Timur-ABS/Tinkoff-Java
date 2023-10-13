@@ -13,7 +13,7 @@ public final class Task1 {
 
     /**
      * The main method to start the program.
-     * It reads a string from the console and converts it from minutes to seconds.
+     * It reads a string from the console and con   verts it from minutes to seconds.
      */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

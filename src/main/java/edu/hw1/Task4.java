@@ -4,6 +4,7 @@ public final class Task4 {
     private Task4() {
 
     }
+
     public static String fixString(String s) {
         if (s == null) {
             return null;

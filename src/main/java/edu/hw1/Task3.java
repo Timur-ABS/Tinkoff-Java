@@ -14,7 +14,8 @@ public final class Task3 {
         if (arr2.length == 0) {
             return false;
         }
-        int[] arr1MinAndMax = findMinAndMax(arr1), arr2MinAndMax = findMinAndMax(arr2);
+        int[] arr1MinAndMax = findMinAndMax(arr1);
+        int[] arr2MinAndMax = findMinAndMax(arr2);
         return arr1MinAndMax[0] > arr2MinAndMax[0] && arr1MinAndMax[1] < arr2MinAndMax[1];
     }
 
