@@ -10,11 +10,15 @@ public final class Task0 {
         // Private constructor to prevent instantiation
     }
 
-    /**
-     * Entry point for the Task0 program.
-     * Logs a welcome message to the console.
-     */
+    //
+    //Entry point for the Task0 program.
+    //Logs a welcome message to the console.
+    //
     public static void main(String[] args) {
+        //
+        //Entry point for the Task0 program.
+        //Logs a welcome message to the console.
+        //
         LOGGER.info("Hello and welcome!");
     }
 

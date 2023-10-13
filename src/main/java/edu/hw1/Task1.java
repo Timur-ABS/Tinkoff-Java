@@ -11,12 +11,13 @@ public final class Task1 {
     private Task1() {
     }
 
-    /**
-     * Entry point for the Task1 program.
-     * This method prompts the user to input a time string in the format "minutes:seconds".
-     * It then converts this string to total seconds and logs the result using the LOGGER.
-     */
+    //Entry point for the Task1 program.
+    //This method prompts the user to input a time string in the format "minutes:seconds".
+    //It then converts this string to total seconds and logs the result using the LOGGER.
     public static void main(String[] args) {
+        //Entry point for the Task1 program.
+        //This method prompts the user to input a time string in the format "minutes:seconds".
+        //It then converts this string to total seconds and logs the result using the LOGGER.
         Scanner in = new Scanner(System.in);
         String string = in.nextLine();
         int result = convertMinutesToSeconds(string);
