@@ -12,8 +12,9 @@ public final class Task1 {
     }
 
     /**
-     * The main method to start the program.
-     * It reads a string from the console and con   verts it from minutes to seconds.
+     * Entry point for the Task1 program.
+     * This method prompts the user to input a time string in the format "minutes:seconds".
+     * It then converts this string to total seconds and logs the result using the LOGGER.
      */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

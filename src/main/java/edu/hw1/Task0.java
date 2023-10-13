@@ -11,10 +11,11 @@ public final class Task0 {
     }
 
     /**
-     * The main method to start the program.
-     * It logs a welcome message.
+     * Entry point for the Task0 program.
+     * Logs a welcome message to the console.
      */
     public static void main(String[] args) {
         LOGGER.info("Hello and welcome!");
     }
+
 }
