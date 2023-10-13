@@ -2,7 +2,7 @@ package edu.hw1;
 
 public final class Task3 {
     public static boolean isNestable(int[] arr1, int[] arr2) {
-        if(arr1.length == 0){
+        if (arr1.length == 0) {
             return true;
         }
         if (arr2.length == 0) {
