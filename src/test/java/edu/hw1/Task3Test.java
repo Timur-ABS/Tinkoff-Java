@@ -14,7 +14,8 @@ public class Task3Test {
         assertEquals(expected, Task3.isNestable(arr1, arr2));
     }
 
-    @Contract(pure = true) private static @NotNull Stream<Object[]> nestableDataProvider() {
+    @Contract(pure = true)
+    private static @NotNull Stream<Object[]> nestableDataProvider() {
         return Stream.of(
             new Object[] {new int[] {1, 2, 3, 4}, new int[] {0, 6}, true},
             new Object[] {new int[] {3, 1}, new int[] {4, 0}, true},

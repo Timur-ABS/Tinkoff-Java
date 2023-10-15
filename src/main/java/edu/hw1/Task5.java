@@ -1,7 +1,5 @@
 package edu.hw1;
 
-import org.jetbrains.annotations.NotNull;
-
 public final class Task5 {
     private static final int BASE_9 = 9;
     private static final int BASE_10 = 10;
@@ -10,7 +8,7 @@ public final class Task5 {
     private Task5() {
     }
 
-    public static @NotNull Boolean isPalindromeDescendant(int num) {
+    public static boolean isPalindromeDescendant(int num) {
         int number = num;
         if (number <= BASE_9) {
             return true;
@@ -43,7 +41,7 @@ public final class Task5 {
         return descendant;
     }
 
-    public static Boolean isPalindrome(int number) {
+    public static boolean isPalindrome(int number) {
         String strNumber = Integer.toString(number);
         int length = strNumber.length();
         for (int i = 0; i < length / 2; i++) {

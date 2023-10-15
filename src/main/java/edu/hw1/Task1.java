@@ -23,13 +23,13 @@ public final class Task1 {
     }
 
     private static int convertStringToInt(@NotNull String string) {
-        if (string.isEmpty() || !isValidNumberString(string)) {
+        if (string.isEmpty() || !isValidNumber(string)) {
             return -1;
         }
         return Integer.parseInt(string);
     }
 
-    private static boolean isValidNumberString(@NotNull String string) {
+    private static boolean isValidNumber(@NotNull String string) {
         for (int i = 0; i < string.length(); i++) {
             if (!Character.isDigit(string.charAt(i))) {
                 return false;

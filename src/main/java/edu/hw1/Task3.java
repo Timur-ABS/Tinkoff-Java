@@ -7,7 +7,7 @@ public final class Task3 {
 
     }
 
-    public static boolean isNestable(int @NotNull [] arr1, int[] arr2) {
+    public static boolean isNestable(@NotNull int[] arr1, @NotNull int[] arr2) {
         if (arr1.length == 0) {
             return true;
         }
