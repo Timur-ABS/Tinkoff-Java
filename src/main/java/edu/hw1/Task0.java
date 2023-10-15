@@ -10,7 +10,7 @@ public final class Task0 {
         // Private constructor to prevent instantiation
     }
 
-    public static void Task0Logger() {
+    public static void taskLogger() {
         LOGGER.info("Hello and welcome!");
     }
 
