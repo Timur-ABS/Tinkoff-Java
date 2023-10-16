@@ -26,7 +26,7 @@ public class Task4 {
     /**
      * Main method to test the callingInfo function.
      */
-    public static void main(String[] args) {
+    public static void Task4Chek(String[] args) {
         testMethod();
     }
 
