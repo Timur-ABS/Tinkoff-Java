@@ -23,13 +23,6 @@ public class Task4 {
         return null;
     }
 
-    /**
-     * Main method to test the callingInfo function.
-     */
-    public static void Task4Chek(String[] args) {
-        testMethod();
-    }
-
     public static void testMethod() {
         CallingInfo info = callingInfo();
         LOGGER.info(info.toString());
