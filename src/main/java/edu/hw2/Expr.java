@@ -1,9 +1,24 @@
 package edu.hw2;
 
+import java.util.logging.Logger;
 import org.jetbrains.annotations.NotNull;
 
 public sealed interface Expr {
+    Logger LOGGER = Logger.getLogger(Expr.class.getName());
+
     double evaluate();
+
+    static void main(String[] args) {
+        var two = new Constant(2);
+        var four = new Constant(4);
+        var negOne = new Negate(new Constant(1));
+        var sumTwoFour = new Addition(two, four);
+        var mult = new Multiplication(sumTwoFour, negOne);
+        var exp = new Exponent(mult, 2);
+        var res = new Addition(exp, new Constant(1));
+
+        LOGGER.info(res + " = " + res.evaluate());
+    }
 
     record Constant(double value) implements Expr {
         @Override
@@ -63,17 +78,5 @@ public sealed interface Expr {
         public @NotNull String toString() {
             return "(" + left.toString() + " * " + right.toString() + ")";
         }
-    }
-
-    static void main(String[] args) {
-        var two = new Constant(2);
-        var four = new Constant(4);
-        var negOne = new Negate(new Constant(1));
-        var sumTwoFour = new Addition(two, four);
-        var mult = new Multiplication(sumTwoFour, negOne);
-        var exp = new Exponent(mult, 2);
-        var res = new Addition(exp, new Constant(1));
-
-        System.out.println(res + " = " + res.evaluate());
     }
 }
