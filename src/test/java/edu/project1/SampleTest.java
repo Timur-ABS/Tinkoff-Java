@@ -1,23 +1,38 @@
 package edu.project1;
 
-import edu.hw1.EvenArrayUtils;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SampleTest {
+class SimpleDictionaryTest {
+
     @Test
-    @DisplayName("Фильтрация четных чисел")
-    void filterEvenNumbers() {
-        // given
-        int[] numbers = new int[] {1, 2, 3, 4, 5};
+    void randomWordShouldReturnAWordFromTheList() {
+        SimpleDictionary dictionary = new SimpleDictionary();
+        String word = dictionary.randomWord();
+        assertTrue(word.matches("hello|world|java|hangman"));
+    }
+}
 
-        // when
-        int[] evenNumbers = EvenArrayUtils.filter(numbers);
+class SessionTest {
 
-        // then
-        assertThat(evenNumbers)
-            .containsExactly(2, 4)
-            .hasSize(2);
+    @Test
+    void guessingCorrectLetterShouldReturnSuccessfulGuess() {
+        Session session = new Session("hello");
+        GuessResult result = session.guess('h');
+        assertTrue(result instanceof GuessResult.SuccessfulGuess);
+    }
+
+    @Test
+    void guessingIncorrectLetterShouldReturnFailedGuess() {
+        Session session = new Session("hello");
+        GuessResult result = session.guess('z');
+        assertTrue(result instanceof GuessResult.FailedGuess);
+    }
+
+    @Test
+    void givingUpShouldReturnDefeat() {
+        Session session = new Session("hello");
+        GuessResult result = session.giveUp();
+        assertTrue(result instanceof GuessResult.Defeat);
     }
 }
